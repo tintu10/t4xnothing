@@ -238,3 +238,25 @@ a {
         transform: translateY(0%);
     }
 }
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;       /* stack logo & menu */
+        padding: 15px 5%;
+    }
+
+    .navbar ul {
+        flex-direction: column;       /* stack links vertically */
+        gap: 15px;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;             /* slightly bigger for touch */
+    }
+}
+
+
+
