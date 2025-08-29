@@ -7,11 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    padding-top: 80px;  /* Adjust this to the actual height of your navbar */
-}
-
-
 /* remove default link style */
 a {
     color: inherit;
@@ -25,7 +20,7 @@ a {
     top: 0;
     width: 100%;
     padding: 20px 9%;
-    background: #2c2f38;
+    background: rgba(44, 47, 56, 0.7); /* semi-transparent */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +29,14 @@ a {
     opacity: 0;
     animation: show-content 1.5s ease forwards;
     animation-delay: 1.2s;
+    backdrop-filter: blur(10px); /* gives glassy look */
 }
+
+body {
+    padding-top: 80px; /* push content below navbar */
+}
+
+
 @keyframes show-content {
     100% {
         visibility: visible;
