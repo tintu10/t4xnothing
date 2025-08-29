@@ -36,7 +36,6 @@ body {
     padding-top: 80px; /* push content below navbar */
 }
 
-
 @keyframes show-content {
     100% {
         visibility: visible;
@@ -213,18 +212,6 @@ body {
     100% { transform: rotate(360deg); }
 }
 
-/* responsive */
-@media (max-width: 900px) {
-    .home {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-    .home-info h1 { font-size: 40px; }
-    .home-info h2 { font-size: 24px; }
-    .home-info p { font-size: 14px; }
-    .home-img .img-box { width: 250px; height: 250px; }
-}
-
 /* Bars animation fixed */
 .bars-animation {
     position: absolute;
@@ -246,24 +233,48 @@ body {
     }
 }
 
+/* Responsive styles for better fit on tablets and phones */
 
+@media (max-width: 900px) {
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .home-info h1 {
+        font-size: 40px;
+    }
+    .home-info h2 {
+        font-size: 24px;
+    }
+    .home-info p {
+        font-size: 14px;
+        max-width: 100%; /* Allow paragraph to expand full width */
+        padding: 0 15px; /* Add some side padding */
+    }
+    .home-img .img-box {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+    }
+}
+
+/* Make navbar stack vertically on smaller devices */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;       /* stack logo & menu */
+        flex-direction: column;        /* stack logo & menu */
         padding: 15px 5%;
     }
 
     .navbar ul {
-        flex-direction: column;       /* stack links vertically */
+        flex-direction: column;        /* stack links vertically */
         gap: 15px;
         margin-top: 15px;
         align-items: center;
     }
 
     .navbar ul li a {
-        font-size: 18px;             /* slightly bigger for touch */
+        font-size: 18px;               /* slightly bigger for touch */
     }
 }
-
 
 
