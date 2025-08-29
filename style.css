@@ -232,13 +232,13 @@ span{
         content: "Developer";
     }
     41%, 60%{
-        content: "Gamer";
+        content: "Web Designer";
     }
     61%, 80%{
-        content: "Techy";
+        content: "Youtuber";
     }
     81%, 100%{
-        content: "Traveller";
+        content: "Script Writer";
     }
 }
 
@@ -267,6 +267,8 @@ span{
         margin-top: 4rem;
     }
 }
+
+
 
 
 
