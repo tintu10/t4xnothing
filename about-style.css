@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* Techy design variables */
+:root {
+  --background: 220 15% 6%;
+  --foreground: 220 15% 90%;
+  --tech-blue: 200 100% 70%;
+  --tech-blue-light: 180 100% 60%;
+  --gradient-background: linear-gradient(135deg, hsl(220 15% 8%), hsl(220 15% 6%));
+  --gradient-card: linear-gradient(145deg, hsl(220 15% 8% / 0.95), hsl(220 15% 6% / 0.9));
+  --shadow-glow: 0 0 30px hsl(200 100% 70%);
+}
+
+/* Apply dark theme */
+html.dark {
+  background: var(--gradient-background);
+  color: hsl(var(--foreground));
+}
+
+/* Base body */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--gradient-background);
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: var(--gradient-card);
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  border: 1px solid hsl(200 100% 70% / 0.3);
+  box-shadow:
+    0 0 25px hsl(200 100% 70% / 0.4),
+    0 0 50px hsl(200 100% 70% / 0.15);
+  max-width: 900px;
+  width: 100%;
+  padding: 3rem;
+}
+
+/* Techy background pattern */
+.tech-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, hsl(200 100% 70% / 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, hsl(180 100% 60% / 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, hsl(200 100% 70% / 0.06) 0%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Profile Section */
+.about-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+@media(min-width: 768px) {
+  .about-profile {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* Profile Image */
+.profile-image {
+  width: 192px; /* 12rem */
+  height: 192px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
+}
+
+/* Profile info text */
+.profile-info h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: hsl(var(--tech-blue));
+}
+
+.profile-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: hsl(var(--tech-blue-light));
+}
+
+.profile-info p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Skills list */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skill-icon {
+  background-color: hsl(200 100% 30%);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px hsl(200 100% 70%);
+  user-select: none;
+  cursor: default;
+  transition: background-color 0.3s ease;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.skill-icon:hover {
+  background-color: hsl(180 100% 60%);
+  box-shadow: 0 0 15px hsl(180 100% 60%);
+  color: white;
+}
+
+
