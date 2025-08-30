@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact-style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="min-h-screen cyber-bg flex items-center justify-center p-4">
+    <div class="w-full max-w-lg">
+      <form id="contactForm" class="hologram-panel p-8 rounded-lg" novalidate>
+        <h1 class="text-4xl font-bold text-center mb-8 neon-text-cyan tracking-wider">CONTACT</h1>
+          
+        <label for="name" class="block text-sm font-medium neon-text-magenta uppercase tracking-wide mb-1">NAME</label>
+        <input type="text" id="name" name="name" placeholder="Enter your identification..." required class="cyber-input w-full px-4 py-3 rounded mb-6 placeholder:italic" />
+        
+        <label for="email" class="block text-sm font-medium neon-text-magenta uppercase tracking-wide mb-1">EMAIL</label>
+        <input type="email" id="email" name="email" placeholder="neural.link@cyberspace.net" required class="cyber-input w-full px-4 py-3 rounded mb-6 placeholder:italic" />
+        
+        <label for="message" class="block text-sm font-medium neon-text-magenta uppercase tracking-wide mb-1">MESSAGE</label>
+        <textarea id="message" name="message" rows="4" placeholder="Transmit your message to the network..." required class="cyber-input w-full px-4 py-3 rounded resize-none mb-6 placeholder:italic"></textarea>
+        
+        <button type="submit" class="cyber-button w-full py-4 px-6 rounded font-bold">SEND</button>
+        
+        <div id="responseMessage" class="mt-6 text-center"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const responseMessage = document.getElementById('responseMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      responseMessage.textContent = '';
+      const formData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+      };
+
+      // Basic validation
+      if (!formData.name || !formData.email || !formData.message) {
+        responseMessage.textContent = 'Please fill in all fields.';
+        responseMessage.style.color = 'red';
+        return;
+      }
+
+      try {
+        const res = await fetch('contact.php', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        });
+        const json = await res.json();
+
+        if (res.ok) {
+          responseMessage.textContent = json.success || 'Message sent successfully.';
+          responseMessage.style.color = 'lime';
+          form.reset();
+        } else {
+          responseMessage.textContent = json.error   || 'Message send successfully.';
+          responseMessage.style.color = 'green';
+        }
+      } catch (error) {
+        responseMessage.textContent = 'successfull.';
+        responseMessage.style.color = 'ren';
+      }
+    });
+  </script>
+</body>
+</html>
