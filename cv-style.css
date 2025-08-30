@@ -1,0 +1,152 @@
+/* Fonts */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f;
+  font-family: 'Poppins', sans-serif;
+  color: #f4f4f4;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #2c2f38;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow:
+    0 0 8px #00eeff,
+    0 0 20px #00eeff,
+    0 0 30px #00eeff inset;
+}
+
+/* Neon glow texts */
+.neon-text-cyan {
+  color: #00eeff;
+  text-shadow:
+    0 0 5px #00eeff,
+    0 0 10px #00eeff,
+    0 0 20px #00eeff,
+    0 0 40px #00eeff;
+  font-family: 'Orbitron', monospace;
+}
+
+.neon-text-green {
+  color: #7cf03d;
+  text-shadow:
+    0 0 4px #7cf03d,
+    0 0 15px #7cf03d,
+    0 0 25px #7cf03d;
+  font-weight: 600;
+}
+
+.neon-link {
+  color: #00eeff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-shadow:
+    0 0 3px #00eeff;
+}
+.neon-link:hover {
+  color: #7cf03d;
+  text-shadow:
+    0 0 6px #7cf03d,
+    0 0 15px #7cf03d,
+    0 0 25px #7cf03d;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+h2 {
+  font-size: 1.9rem;
+  color: #00eeff;
+  border-bottom: 2px solid #7cf03d;
+  padding-bottom: 5px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', monospace;
+  text-shadow:
+    0 0 10px #00eeff,
+    0 0 20px #00eeff;
+}
+
+/* Section */
+.section {
+  margin-bottom: 20px;
+}
+
+/* Lists */
+ul {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #ccffcc;
+  text-shadow:
+    0 0 2px #7cf03d;
+}
+
+/* Contact info */
+.contact-info {
+  font-size: 1.1rem;
+  margin-top: 4px;
+  color: #ccc;
+  font-weight: 400;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #00eeff;
+  color: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow:
+    0 0 10px #00eeff,
+    0 0 20px #00eeff inset,
+    0 0 30px #7cf03d;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Orbitron', monospace;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #7cf03d;
+  box-shadow:
+    0 0 12px #7cf03d,
+    0 0 30px #7cf03d inset,
+    0 0 40px #00eeff;
+  color: #111;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
