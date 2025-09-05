@@ -1,0 +1,67 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('background.png') center center/cover no-repeat fixed #1a0121;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 60px;
+  text-align: center;
+}
+h1 {
+  font-size: 5rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+.blue {
+  color: #01f0ff;
+  text-shadow: 0 0 18px #01f0ff, 0 0 40px #00aaff;
+}
+.pink {
+  color: #f50cf3;
+  text-shadow: 0 0 18px #f50cf3, 0 0 40px #ff3ec8;
+}
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  justify-items: center;
+}
+.btn {
+  display: inline-block;
+  width: 150px;
+  padding: 14px 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+  font-size: 1.2rem;
+  font-family: inherit;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+}
+.btn.blue {
+  color: #01f0ff;
+  border-color: #01f0ff;
+  box-shadow: 0 0 10px #01f0ff, 0 0 28px #00aaff inset;
+}
+.btn.pink {
+  color: #f50cf3;
+  border-color: #f50cf3;
+  box-shadow: 0 0 10px #f50cf3, 0 0 28px #ff3ec8 inset;
+}
+.btn:hover,
+.btn:focus {
+  background: rgba(25, 0, 50, 0.5);
+  box-shadow: 0 0 18px #fff, 0 0 32px #fff;
+  outline: none;
+}
