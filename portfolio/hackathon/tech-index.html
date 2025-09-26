@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI + IoT Tech for Safer Roads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tech-style.css">
+</head>
+<body>
+  <div class="bg-overlay"></div>
+  <header class="main-flex fade">
+    <img src="tech.jpg" class="hero-img" alt="Tech Elephant AI IoT"/>
+    <div class="hero-content">
+      <h1>AI + IoT for safer roads</h1>
+      <h2>Preventing human–elephant conflict</h2>
+      <p>
+        Technology combines <span class="highlight">IoT sensors</span> and <span class="highlight">Edge AI</span> for real-time elephant presence alerts, reducing conflicts and improving safety.
+      </p>
+    </div>
+  </header>
+  <main>
+    <section class="card-grid">
+      <div class="hex-card fade">
+        <h3>AI components</h3>
+        <p>
+          
+
+Model: YOLOv8 (You Only Look Once, version 8)
+
+Why YOLOv8?
+
+Lightweight & fast → suitable for real-time detection.
+
+High accuracy in object detection tasks.
+
+Can be trained to specifically recognize elephants from images/videos.
+
+How it works:
+
+Sensors or camera capture frames.
+
+YOLOv8 runs on a connected device/server.
+
+Identifies if the detected object is an elephant (vs. human, cow, vehicle, etc.).
+
+Optimization: Quantization & pruning for smaller model size (to run on limited hardware).
+        </p>
+      </div>
+      <div class="hex-card fade">
+        <h3>IoT Hardware</h3>
+        <ul>
+          <li>Microcontroller: ESP32 (low-cost, Wi-Fi + Bluetooth enabled).</li>
+          <li>Role in system:
+
+Collects input from motion/thermal sensors or cameras.
+
+Sends data (alerts/frames) to the AI processing unit or cloud.
+
+Triggers alarms locally (siren, LED, speaker).</li>
+          <li>Why ESP32?
+
+Low power consumption → suitable for solar or battery-powered setups.
+
+Built-in Wi-Fi → direct communication without extra modules.
+
+Supports integration with sensors & cloud IoT platforms.</li>
+        </ul>
+      </div>
+      <div class="hex-card fade">
+        <h3>Sensors and Communication Layer</h3>
+        <ul>
+          <li>Sensors Used (Examples you can highlight)
+
+PIR Motion Sensor → detects movement near the road.
+
+Thermal/IR Sensor → identifies heat signatures at night.
+
+Camera Module (optional) → captures frames for YOLOv8 analysis.
+
+Acoustic Sensor → detects elephant trumpeting sounds.</li>
+          <li>Communication Layer
+
+ESP32 sends data via:
+
+Wi-Fi (to local server/cloud).
+
+LoRa (long-range, low power — optional for rural areas).
+
+GSM/SMS (for mobile alerts — future upgrade).</li>
+        </ul>
+      </div>
+      <div class="hex-card fade">
+        <h3>Solution Overview</h3>
+        <div class="diagram-flex">
+          <span class="diagram-step">Sensors</span>
+          <span class="arrow">→</span>
+          <span class="diagram-step">YOLOv8 AI</span>
+          <span class="arrow">→</span>
+          <span class="diagram-step">Gateway</span>
+          <span class="arrow">→</span>
+          <span class="diagram-step">Alarm/Dashboard</span>
+        </div>
+        <p>
+          1. Alert System
+
+Outputs:
+
+Loudspeaker siren.
+
+Flashing warning lights.
+
+Roadside display board with “Elephant Detected – Danger Ahead”.
+
+(Optional future) SMS/Push notification to villagers.<br/>
+          2.Power System
+
+Solar panel + rechargeable battery for 24/7 uptime.
+
+ESP32 designed for low-power sleep modes to save energy.<br/>
+          3. Dashboard 
+
+Shows detection logs, last alerts, and sensor status.
+
+Could be hosted on a small server or cloud (ESP32 → Firebase / custom web app).
+        </p>
+      </div>
+    </section>
+  </main>
+  <script src="tech-script.js"></script>
+</body>
+</html>

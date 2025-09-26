@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>AI + IoT Elephant Project</title>
+  <link rel="stylesheet" href="about-style.css">
+</head>
+<body>
+  <header class="main-flex fade">
+    <img src="bg.png" alt="Elephant AI IoT flyer" class="hero-img"/>
+    <div class="hero-content">
+      <h1>AI + IoT for safer roads:<br>preventing human–elephant conflict</h1>
+      <p>
+        Our project combines <span class="highlight">lightweight IoT sensors</span> with <span class="highlight">on-edge AI</span> to detect elephant movement near human paths and trigger immediate local alerts.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="flex-row fade">
+      <div class="card">
+        <h2>About</h2>
+        <p>
+          <strong>Human–elephant conflict</strong> is a major safety and conservation challenge in many <span class="highlight">rural</span> areas. Our solution uses a network of low–power sensors (acoustic/thermal/motion) and a compact AI model running on edge devices to identify elephant presence in real time. When the system detects a risk, it triggers local alarms and visual warnings so people can safely avoid the area. The design is low-cost, solar-capable, and built to operate offline, so it works in remote locations.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Problem</h2>
+        <p>
+          Rural roads near forests are hotspots for accidental human–elephant encounters.
+        </p>
+      </div>
+    </section>
+
+    <section class="flex-row fade">
+      <div class="card">
+        <h2>Mission & objectives</h2>
+        <ul>
+          <li>Reduce human–elephant encounters with early detection and rapid local alerts</li>
+          <li>Real-time detection at critical hotspots</li>
+          <li>Instant local alert (siren/LED/voice) to warn people nearby</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Who it helps</h2>
+        <ul>
+          <li>Villagers and commuters using forest-edge roads</li>
+          <li>Forest & wildlife authorities</li>
+          <li>Local schools and farmers</li>
+          <li>Elephants—less stress and fewer retaliatory incidents</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fade">
+      <h2>Solution overview</h2>
+      <div class="diagram-flex">
+        <div class="diagram-step">Sensors</div>
+        <div class="arrow">→</div>
+        <div class="diagram-step">Edge AI</div>
+        <div class="arrow">→</div>
+        <div class="diagram-step">Gateway</div>
+        <div class="arrow">→</div>
+        <div class="diagram-step">Local alarm/Dashboard</div>
+      </div>
+      <ol>
+        <li>Sensors detect movement/sound/heat near the road</li>
+        <li>Edge device (Raspberry Pi/microcontroller) + AI classifies elephant presence</li>
+        <li>Immediate alert (siren/LED/voice) triggers for people nearby</li>
+        <li>Dashboard/Cloud update for authorities</li>
+      </ol>
+    </section>
+  </main>
+  <script src="about-script.js"></script>
+</body>
+</html>

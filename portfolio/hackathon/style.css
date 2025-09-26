@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: url('background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1150px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(70,70,90,0.1);
+  padding: 32px 36px 36px 36px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0 0 24px 0;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #293a2b;
+  font-size: 1.11rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background .18s;
+}
+
+nav ul li a:hover {
+  background: #e5f4ed;
+}
+
+.main-content {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.description {
+  flex: 1.15;
+}
+
+.description h1 {
+  font-size: 2.5rem;
+  color: #273a2f;
+  margin-bottom: 20px;
+  line-height: 1.13;
+  font-weight: 700;
+}
+
+.description p {
+  font-size: 1.12rem;
+  color: #464c45;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.buttons button {
+  background: #254937;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 14px;
+  padding: 14px 36px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buttons button:hover {
+  background: #3c7b7b;
+}
+
+.image-section {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elephant-img {
+  width: 320px;
+  margin-bottom: 18px;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  opacity: 0.07;
+  z-index: 0;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.warning-icon {
+  font-size: 2.3rem;
+  color: #e37d2b;
+  background: #ffe6d0;
+  border-radius: 14px;
+  padding: 3px 18px;
+  font-weight: bold;
+}
+
+.wifi-icon {
+  font-size: 2.3rem;
+  color: #237261;
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .image-section {
+    align-items: flex-start;
+  }
+}
